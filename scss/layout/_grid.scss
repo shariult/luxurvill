@@ -1,0 +1,67 @@
+.container {
+  display: grid;
+  grid-template-columns:
+    [grid-start] minmax(5rem, 1fr) repeat(
+      12,
+      [col-start] minmax(min-content, 10rem) [col-end]
+    )
+    minmax(5rem, 1fr) [grid-end];
+  grid-template-rows:
+    [header-start] 90vh [header-end features-start]
+    min-content [features-end story-start]
+    40vw [story-end]
+    repeat(3, [row-start] min-content [row-end]);
+  @include responsive(1440) {
+    grid-template-rows:
+      [header-start] 80vh [header-end]
+      repeat(6, [row-start] min-content [row-end]);
+  }
+  @include responsive(800) {
+    grid-template-rows:
+      [header-start] 80vh [header-end]
+      repeat(7, [row-start] min-content [row-end]);
+  }
+  position: relative;
+}
+.header {
+  grid-column: grid-start / col-end 10;
+  @include responsive(1440) {
+    grid-column: grid-start / grid-end;
+  }
+}
+.realtor {
+  background: $color-se;
+  grid-column: col-start 11 / grid-end;
+  @include responsive(1440) {
+    grid-column: grid-start / grid-end;
+    grid-row: row-start 1 / row-end 1;
+  }
+}
+.section-features {
+  grid-column: col-start 1 / col-end 12;
+}
+.story__pictures {
+  grid-column: grid-start / col-end 6;
+  @include responsive(800) {
+    grid-column: grid-start / grid-end;
+    grid-row: row-start 4 / row-end 4;
+  }
+}
+.story__content {
+  background: $grey-l2;
+  grid-column: col-start 7 / grid-end;
+  @include responsive(800) {
+    grid-column: grid-start / grid-end;
+    grid-row: row-start 3 / row-end 3;
+  }
+}
+.section-resorts {
+  grid-column: col-start 1 / col-end 12;
+}
+.image-gallery {
+  grid-column: grid-start / grid-end;
+}
+.footer {
+  background: $color-se;
+  grid-column: grid;
+}

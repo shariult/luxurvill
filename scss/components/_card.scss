@@ -1,0 +1,54 @@
+.card {
+  background: $grey-l2;
+  display: grid;
+  grid-template-columns: repeat(4, [col-start] 25% [col-end]);
+  justify-items: center;
+  &__icon {
+    height: $font-size-default;
+    width: $font-size-default;
+    fill: $color-pr;
+    display: inline-block;
+    &--top-right {
+      grid-column: col-start 4 / col-end 4;
+      grid-row: 1 / auto;
+      justify-self: flex-end;
+      height: 2.5rem;
+      width: 2.5rem;
+      margin: 1rem;
+    }
+  }
+  &__image {
+    grid-column: col-start 1 / col-end 4;
+    grid-row: 1 / auto;
+    width: 100%;
+    display: block;
+  }
+  &__heading {
+    grid-column: col-start 1 / col-end 4;
+    width: 80%;
+    padding: 1.25rem;
+    color: $grey-l2;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-family: $font-display;
+    text-transform: capitalize;
+    text-align: center;
+    background-color: $color-se;
+    transform: translateY(-50%);
+  }
+  &__detail {
+    grid-column: span 2;
+    margin-bottom: 2.5rem;
+  }
+  &__text {
+    display: inline-block;
+  }
+  &__btn {
+    grid-column: span 4;
+    justify-self: stretch;
+  }
+  &__heading,
+  &__btn {
+    @include flexCenter;
+  }
+}

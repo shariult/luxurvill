@@ -1,0 +1,66 @@
+// Imports
+$font-size-default: 1.6rem;
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin sans", sans-serif;
+
+body {
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-family: $font-primary;
+  color: $grey-d1;
+  line-height: 1.6;
+}
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: $grey-l2;
+  font-family: $font-display;
+  letter-spacing: 0.2rem;
+  margin: 1rem 0;
+  @include responsive(800) {
+    font-size: 3.5rem;
+  }
+}
+.heading-2 {
+  font-size: 4rem;
+  font-family: $font-display;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+  @include responsive(800) {
+    font-size: 3rem;
+  }
+  &--quoted {
+    &::before {
+      content: "\201c";
+      margin-right: -1rem;
+    }
+    &::after {
+      content: "\201d";
+      margin-left: -1rem;
+    }
+  }
+}
+.heading-3 {
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 1.9rem;
+}
+.heading-5 {
+  font-size: $font-size-default;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: $font-display;
+}
+.heading--color-p {
+  color: $color-pr;
+}
+.heading--color-pd {
+  color: $color-pd;
+}
+.paragraph {
+  font-size: 1.7rem;
+  @include responsive(800) {
+    font-size: 1.5rem;
+  }
+}

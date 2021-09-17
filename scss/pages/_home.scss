@@ -1,0 +1,101 @@
+.realtor {
+  @include flexCenter;
+  flex-flow: column nowrap;
+  padding: 10rem $space-xl;
+  @include responsive(1440) {
+    flex-flow: row wrap;
+  }
+  &__title {
+    margin-bottom: $space-xl;
+    @include responsive(1440) {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
+  & > *:not(:first-child) {
+    margin-bottom: $space-l;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    grid-column-gap: $space-s;
+    align-items: center;
+    justify-content: start;
+    min-width: 24rem;
+  }
+  &__image {
+    grid-row: span 2;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 10rem;
+  }
+  &__name {
+    color: $grey-l2;
+    font-weight: 400;
+    font-family: $font-display;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  &__sold {
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+}
+
+.section-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 6rem;
+  place-content: center;
+  padding: $section-padding;
+}
+
+.section-resorts {
+  margin: $section-padding;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 12vw;
+  grid-gap: $space-xs;
+  padding: $space-l;
+  background-color: $grey-l2;
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: $transition-s;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  // &:hover &__image:not(:hover) {
+  //   transform: scale(0.95);
+  // }
+  &__box {
+    &--h {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+    &--v {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+    &--b {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    @include responsive(800) {
+      &--h,
+      &--v,
+      &--b {
+        grid-column: 1 / -1;
+        grid-row: span 4;
+      }
+    }
+  }
+}

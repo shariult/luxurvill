@@ -1,0 +1,144 @@
+.navbar {
+  width: 100%;
+  background: $color-se;
+  color: $grey-l1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  @include responsive(1440) {
+    padding: 0 $space-l;
+  }
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    max-width: $grid-width;
+    margin: 0 auto;
+  }
+  .logo-box {
+    max-height: 4.8rem;
+    max-width: 4.8rem;
+    margin: $space-xs 0;
+    &__img {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      fill: $color-se;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    list-style-position: inside;
+  }
+  // &__item {}
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      @include flexCenter;
+      height: 100%;
+      padding: $space-xs $space-l;
+      border: none;
+      outline: 2px dashed transparent;
+      text-decoration: none;
+      font-size: $font-size-default;
+      color: inherit;
+      cursor: pointer;
+      transition: $transition-s;
+    }
+    &:hover {
+      background: $color-sl;
+    }
+    &:active,
+    &:focus {
+      background: $color-sl;
+      outline: 2px dashed $color-pl;
+    }
+  }
+  &__toggle {
+    align-self: center;
+    display: none;
+    height: 5rem;
+    width: 5rem;
+    background: $color-pl;
+    border-radius: $space-xs;
+    cursor: pointer;
+  }
+  &__icon {
+    display: block;
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $grey-l1;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: $transition-s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+  &__toggle--open + &__toggle &__icon {
+    background-color: transparent;
+  }
+  &__toggle--open + &__toggle &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__toggle--open + &__toggle &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  @include responsive(800) {
+    .row-flex {
+      justify-content: space-between;
+    }
+    &__list {
+      flex-flow: column nowrap;
+      width: 100%;
+      background: $color-pl;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      opacity: 0;
+      transform-origin: top center;
+      transform: scaleY(0);
+      transition: $transition-m;
+    }
+    &__item {
+      padding: $space-xs $space-m;
+    }
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        width: 100%;
+      }
+    }
+    .btn {
+      margin-bottom: $space-xs;
+    }
+    &__toggle {
+      @include flexCenter;
+    }
+    &__toggle--open {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+}

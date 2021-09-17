@@ -1,0 +1,50 @@
+.footer {
+  padding: $gutter-vertical;
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+  }
+  &__item {
+    text-align: center;
+  }
+  &__link {
+    transition: $transition-s;
+    &:link,
+    &:visited {
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $grey-l2;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      padding: 1rem;
+    }
+    &:hover {
+      background: lighten($color-se, 5%);
+      transform: translateY(-0.5rem);
+    }
+  }
+  &__link--text {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-pr;
+    transition: $transition-s;
+    &:hover {
+      color: $color-pl;
+      transform: scale(1.05);
+    }
+  }
+
+  .copyright {
+    width: 60%;
+    text-align: center;
+    margin: 5rem auto;
+    color: $grey-l1;
+    font-size: 1.4rem;
+  }
+}

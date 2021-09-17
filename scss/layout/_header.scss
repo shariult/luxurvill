@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 10rem;
+  background: linear-gradient(
+      to right bottom,
+      rgba($color-se, 0.93),
+      rgba($color-se, 0.93)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  &__btn {
+    margin: $space-m 0 8rem;
+  }
+}
+
+.seen {
+  // Styles for 'Seen On' text
+  &__text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: $space-s 0;
+    white-space: nowrap;
+    text-transform: uppercase;
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 0.1rem;
+      width: 25vw;
+      background-color: $grey-l1;
+    }
+  }
+  // Styles for all logos container
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+  }
+  // Styles for single brand logo
+  &__logo {
+    display: inline-block;
+    max-width: 10%;
+  }
+}

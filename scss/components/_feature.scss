@@ -1,0 +1,13 @@
+.feature {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-gap: 1rem;
+  &__icon {
+    grid-row: span 2;
+    height: 45px;
+    width: 45px;
+    fill: $color-pr;
+    display: block;
+    margin-top: -1rem;
+  }
+}

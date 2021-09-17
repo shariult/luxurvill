@@ -1,0 +1,35 @@
+//==========================================
+// Clearing Floats
+//==========================================
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//==========================================
+// Responsive Design
+//==========================================
+@mixin responsive($screenWidth) {
+  $breakpoint: $screenWidth / 16;
+  @media only screen and (max-width: $breakpoint + em) {
+    @content;
+  }
+}
+
+//==========================================
+// Center
+//==========================================
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin positionCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

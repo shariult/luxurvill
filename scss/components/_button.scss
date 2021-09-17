@@ -1,0 +1,23 @@
+.btn {
+  &,
+  &:link,
+  &:active {
+    display: inline-block;
+    padding: $space-s $space-m;
+    font-weight: bold;
+    color: $grey-l2;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+    transition: $transition-s;
+  }
+  &--color-primary {
+    background-color: $color-pr;
+  }
+  &:hover,
+  &:focus {
+    background-color: darken($color-pr, 10%);
+  }
+}
