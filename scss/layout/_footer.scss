@@ -1,3 +1,7 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 .footer {
   padding: $gutter-vertical;
   &__list {

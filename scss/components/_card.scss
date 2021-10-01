@@ -1,11 +1,16 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+@use "../base/typography";
+//=============Imports End===============
+
 .card {
   background: $grey-l2;
   display: grid;
   grid-template-columns: repeat(4, [col-start] 25% [col-end]);
   justify-items: center;
   &__icon {
-    height: $font-size-default;
-    width: $font-size-default;
+    height: $medium-md;
+    width: $medium-md;
     fill: $color-pr;
     display: inline-block;
     &--top-right {
@@ -30,7 +35,7 @@
     color: $grey-l2;
     font-size: 1.7rem;
     font-weight: 400;
-    font-family: $font-display;
+    font-family: typography.$font-display;
     text-transform: capitalize;
     text-align: center;
     background-color: $color-se;

@@ -1,3 +1,7 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 .navbar {
   width: 100%;
   background: $color-se;
@@ -7,7 +11,7 @@
   left: 0;
   z-index: 7;
   @include responsive(1440) {
-    padding: 0 $space-l;
+    padding: 0 $large-lg;
   }
   &__grid {
     display: flex;
@@ -19,7 +23,7 @@
   .logo-box {
     max-height: 4.8rem;
     max-width: 4.8rem;
-    margin: $space-xs 0;
+    margin: $small-sm 0;
     &__img {
       display: inline-block;
       height: 100%;
@@ -39,11 +43,11 @@
     &:visited {
       @include flexCenter;
       height: 100%;
-      padding: $space-xs $space-l;
+      padding: $small-sm $large-lg;
       border: none;
       outline: 2px dashed transparent;
       text-decoration: none;
-      font-size: $font-size-default;
+      font-size: $medium-md;
       color: inherit;
       cursor: pointer;
       transition: $transition-s;
@@ -63,7 +67,7 @@
     height: 5rem;
     width: 5rem;
     background: $color-pl;
-    border-radius: $space-xs;
+    border-radius: $small-sm;
     cursor: pointer;
   }
   &__icon {
@@ -121,7 +125,7 @@
       transition: $transition-m;
     }
     &__item {
-      padding: $space-xs $space-m;
+      padding: $small-sm $medium-md;
     }
     &__link {
       &,
@@ -131,7 +135,7 @@
       }
     }
     .btn {
-      margin-bottom: $space-xs;
+      margin-bottom: $small-sm;
     }
     &__toggle {
       @include flexCenter;

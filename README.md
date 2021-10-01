@@ -1,6 +1,6 @@
 # Luxurvill - Template
 
-Frontend template developed as Portfolio project build with [project with parcel](https://github.com/shariult/projects-with-parcel.git). But it should work with any Parcel configured package. Final build can be found in the "dist" directory once project is deployed. Visit [Luxurvill](https://shariul.com/assets/projects/luxurvill/) for live view.
+Frontend template developed as Portfolio project build with [project with parcel](https://github.com/shariult/projects-with-parcel.git). But it should work with any Parcel configured package. Visit [Luxurvill](https://shariul.com/assets/projects/luxurvill/) for live view.
 
 ## Tools Required
 
@@ -8,5 +8,5 @@ Frontend template developed as Portfolio project build with [project with parcel
 
 ## Configuration
 
-"start" and "build" fields of "package.json" needs to be modified to point to this projects directory.
+After downloading specified tools, modify the "start" and "build" fields in "package.json" to point to this projects path.
 

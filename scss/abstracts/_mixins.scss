@@ -1,5 +1,9 @@
+//=============Imports Start=============
+@use "sass:math";
+//=============Imports End===============
+
 //==========================================
-// Clearing Floats
+// Clearfix
 //==========================================
 @mixin clearfix {
   &::after {
@@ -13,14 +17,14 @@
 // Responsive Design
 //==========================================
 @mixin responsive($screenWidth) {
-  $breakpoint: $screenWidth / 16;
+  $breakpoint: math.div($screenWidth, 16);
   @media only screen and (max-width: $breakpoint + em) {
     @content;
   }
 }
 
 //==========================================
-// Center
+// Center Elements
 //==========================================
 @mixin flexCenter {
   display: flex;

@@ -1,3 +1,7 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 .story__pictures {
   display: grid;
   grid-template-columns: repeat(6, [col-start] 16.66667% [col-end]);
@@ -44,7 +48,7 @@
   padding: $gutter-vertical 0;
   & > *:not(:last-child) {
     max-width: 75%;
-    margin-bottom: $space-l;
+    margin-bottom: $large-lg;
   }
   .paragraph {
     color: $color-pd;

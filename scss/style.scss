@@ -1,35 +1,43 @@
+/*
+Theme Name: Luxurvill
+Theme URI: https://shariul.com/assets/projects/luxurvill/
+Description: A landing for fictional company that finds luxurious hotels, homes and rentals
+Author: Md. Shariul Islam Tuhin
+Author URI: http://www.shariul.com
+Version: 1.0
+Tags: responsive, columns, custom menu, luxurious, hotels, houses
+*/
+
 //==========================================
-// Abstracts
+// Vendor
 //==========================================
-@import "abstracts/variables";
-@import "abstracts/mixins";
-@import "abstracts/functions";
+// @use "vendor/vendor";
 
 //==========================================
 // Base
 //==========================================
-@import "base/base";
-@import "base/animation";
-@import "base/typography";
-@import "base/utilities";
+@use "base/base";
+@use "base/animation";
+@use "base/typography";
+@use "base/utilities";
 
 //==========================================
 // Layout
 //==========================================
-@import "layout/navigation";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
+@use "layout/navigation";
+@use "layout/grid";
+@use "layout/header";
+@use "layout/footer";
 
 //==========================================
 // Components
 //==========================================
-@import "components/button";
-@import "components/card";
-@import "components/feature";
-@import "components/story";
+@use "components/button";
+@use "components/card";
+@use "components/feature";
+@use "components/story";
 
 //==========================================
 // Pages
 //==========================================
-@import "pages/home";
+@use "pages/home";

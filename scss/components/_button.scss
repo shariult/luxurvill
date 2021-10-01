@@ -1,9 +1,13 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 .btn {
   &,
   &:link,
   &:active {
     display: inline-block;
-    padding: $space-s $space-m;
+    padding: $small-sp $medium-md;
     font-weight: bold;
     color: $grey-l2;
     text-align: center;
